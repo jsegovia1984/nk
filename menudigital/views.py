@@ -3,14 +3,12 @@ from django.views.generic import ListView
 from .models import postres
 
 # Create your views here.
-def menu(request):
-    data={
-        "titulo":"Menu bar 1",
-    }
+# def menu(request):
+#     data={
+#         "titulo":"Menu bar 1",
+#     }
 
-    return(render(request,"menu.html",data))
-
-
+#     return(render(request,"menu.html",data))
 
 class menu(ListView):
     model = postres
