@@ -1,0 +1,120 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'mapa/css/leaflet.css' %}" />
+    <link rel="stylesheet" href="{% static 'mapa/css/custom.css' %}">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Detalle de asociaciones civiles</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
+            <a class="navbar-brand" href="/"> Ateneo Nestor Kirchner - Detalle asociaciones civiles</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                </div>
+            </div>
+          </nav>
+    </header>
+     <table class="table">
+
+    <div class="container">
+
+ <div class="hero-unit">
+        <h1> Ateneo Nestor Kirchner </h1>
+        <p>{{institucion.nombre}}</p>
+      </div>
+  <tbody>
+      </div>
+
+    <tr>
+      <th scope="row">Foto</th>
+      {% if institucion.foto %}
+      <td><img src="../../media/{{institucion.foto|default_if_none:""}}"  alt="foto asociacion civil" width="500" height="600">}</td>
+      {% else %}
+      <td> <strong>Sin foto<strong></td>
+
+      {% endif %}
+    </tr>
+
+    <tr>
+      <th scope="row">Direccion</th>
+      <td>{{institucion.direccion|default_if_none:""}} </td>
+    </tr>
+    <tr>
+      <th scope="row">Localidad</th>
+      <td>{{institucion.localidad|default_if_none:"" }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Tipo</th>
+      <td>{{institucion.tipo|default_if_none:""}}</td>
+    </tr>
+   <tr>
+      <th scope="row">Grado de relacion</th>
+      <td>{{institucion.grado_de_relacion|default_if_none:""}} </td>
+    </tr>
+   <tr>
+   <tr>
+      <th scope="row">Detalle</th>
+      <td>{{institucion.detalle|default_if_none:""}}  </td>
+    </tr>
+   <tr>
+      <th scope="row">Recursos y Actividades</th>
+      <td>{{institucion.recursos_y_actividades|default_if_none:""}}  </td>
+    </tr>
+   <tr>
+
+      <th scope="row">Inscripto</th>
+
+            <td>{{institucion.Inscripta}} </td>
+
+    </tr>
+    <tr>
+      <th scope="row">Numero</th>
+      <td>{{institucion.numero|default_if_none:""}}  </td>
+    </tr>
+   <tr>
+      <th scope="row">Situacion documental</th>
+      <td>{{institucion.situacion_documental|default_if_none:""}}  </td>
+    </tr>
+   <tr>
+      <th scope="row">Proceso</th>
+      <td>{{institucion.proceso|default_if_none:""}}  </td>
+    </tr>
+      <th scope="row">Organizacion</th>
+      <td>{{institucion.organizacion|default_if_none:""}} </td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+  
+
+
+ 								
+
+
+
+    <footer>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+
+        </div>
+        <!-- Copyright -->
+    </footer>
+   
+
+
+    </script>
+</body>
+</html>
