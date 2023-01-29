@@ -15,6 +15,6 @@ class menu(ListView):
     template_name = 'menu.html'
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super().get_context_data(self, **kwargs)
         context['postres'] =  postres.objects.all()
         return context
