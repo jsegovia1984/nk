@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic.list import ListView
 from .models import postres
 
 # Create your views here.
@@ -18,3 +18,5 @@ class menu(ListView):
     #     context = super().get_context_data(self, **kwargs)
     #     context['postres'] =  postres.objects.all()
     #     return context
+
+ 
